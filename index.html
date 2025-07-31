@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Carrito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛒 Simulador de Carrito <span id="cart-count">0</span></h1>
+    </header>
+
+    <main class="container">
+        <!-- Sección izquierda -->
+        <section class="left">
+            <div class="card">
+                <h2>Agregar producto</h2>
+                <input type="text" id="product-name" placeholder="Nombre del producto">
+                <input type="number" id="product-price" placeholder="Precio">
+                <button id="add-product">Agregar</button>
+            </div>
+
+            <div class="card">
+                <h2>Carrito de Compras</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+                <p>Total: $<span id="total">0</span></p>
+                <button id="clear-cart" class="danger">Vaciar Carrito</button>
+            </div>
+        </section>
+
+        <!-- Sección derecha -->
+        <aside class="right">
+            <div class="card">
+                <h2>Resumen de Compra</h2>
+                <p>Subtotal: $<span id="subtotal">0</span></p>
+                <p>Impuestos (10%): $<span id="tax">0</span></p>
+                <p>Descuento: $<span id="discount">0</span></p>
+                <h3>Total: $<span id="final-total">0</span></h3>
+                <button id="apply-coupon">Aplicar Cupón</button>
+            </div>
+
+            <div class="card">
+                <h2>Recomendados</h2>
+                <p>Leche $3 <button class="add">Agregar</button></p>
+                <p>Pan $2 <button class="add">Agregar</button></p>
+            </div>
+
+            <div class="card">
+                <h2>Actividad reciente</h2>
+                <ul id="activity-log"></ul>
+            </div>
+        </aside>
+    </main>
+    
+<script src="main.js"></script>
+</body>
+
+</body>
+</html>
