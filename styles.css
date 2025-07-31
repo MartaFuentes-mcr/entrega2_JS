@@ -141,4 +141,46 @@ button.clear-btn:hover {
   background-color: #b02a37;
 }
 
+/* Estilo base para escritorio */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas para desktop */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Responsive para tablets y móviles */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* En móvil, una sola columna */
+    gap: 15px;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .card button {
+    width: 100%; /* Botones más fáciles de tocar en móvil */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .card {
+    padding: 10px;
+  }
+}
 
